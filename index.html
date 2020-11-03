@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/ABS_Logo.svg"/>
+    <link rel="stylesheet" href="CSS/style.css"/>
+    <script type="text/javascript" src="JavaScript/jquery-3.5.1.min.js">
+        // jQuery Library version 3.5.1
+    </script>
+    <script type="text/javascript" src="JavaScript/main.js" ></script>
+    <title>Australian Bureau of Statistics</title>
+</head>
+<body>
+<header>
+    <img class="logo" src="img/ABS_Logo.svg" alt="abs Logo">
+    <div class="brand">
+        <h1>Australian Bureau of Statistics</h1>
+        <h2>Asutralian Census Questionnaire</h2>
+    </div>
+</header>
+<section>
+    <p class="intro">The Census provides a snapshot of Australia’s people and their housing. It helps estimate Australia’s population which is used to distribute government funds and plan services for your community.</p>
+
+    <form action="https://tau.usq.edu.au/courses/CSC2406/reflect.php" method="POST">
+        <fieldset id="address">
+            <legend>Address of the Dwelling</legend>
+            <p>
+            <label for="unit"><span class="space">Apartment/Unit Number</span></label>
+            <input type="number" name="unit" id="unit" size="10">
+            
+            <label for="streetNumber" class="inline">Street Number</label>
+            <input type="number" name="streetNumber" id="streetNumber" size="10">
+            </p>
+            <p>
+            <label for="streetName"><span class="space">Street Name</span></label>
+            <input type="text" name="streetName" id="streetName" size="80">
+            </p>
+            <p>
+            <label for="suburb"><span class="space">Suburb/City</span></label>
+            <input type="text" name="suburb" id="suburb" size="40">
+            </p>
+            <p>
+            <label for="state"><span class="space">State</span></label>
+            <input type="text" name="state" id="state" size="20">
+            <label for="code" class="inline">Postcode</label>
+            <input type="number" name="code" id="code" size="8">
+            </p>
+            <p>
+            <label for="peopleNight">How many people spent the census night at the dwelling?</label>
+            <input type="number" name="peopleNight" id="peopleNight" min="1" size="5">
+            </p>
+            <div class="HelpAddress">
+                <p>
+                    Please fill in the form with the correct information. <br> If apartment and street number does not apply, please leave the space blank.<br> Select the number of people spending the night at the dwelling and click next to go to the following step.   
+                </p>
+            </div>
+            <p class="buttons">
+                <button type="button" id="help" class="help">Help</button>
+                <button type="button" id="next" class="next">Next</button> 
+            </p>
+        </fieldset>
+        <fieldset id="dwelling">
+            <legend>The Dwelling</legend>
+                <div class="HelpDwelling">
+                  <p>
+                    The information you provide is confidential to the ABS. <br> Monthly internet downloaded is measured in Gigabytes, please contact your internet provider if you have any question. 
+                  </p>
+                </div>
+                <p>
+                    <label for="" class="rad">Type of Dwelling:</label> 
+                    <label for="typeDwelling" >Detached House</label>
+                    <input type="radio" name="typeDwelling" id="typeDwelling" value="Detached House">          
+                    <label for="typeDwelling">Semi-detached House</label>
+                    <input type="radio" name="typeDwelling" id="typeDwelling" value="Semi-detached House"> 
+                    <label for="typeDwelling">Apartment</label>
+                    <input type="radio" name="typeDwelling" id="typeDwelling" value="Apartment"> 
+                    <label for="typeDwelling">Retirement Village</label>
+                    <input type="radio" name="typeDwelling" id="typeDwelling" value="Retirement Village"> 
+                    <label for="typeDwelling">Caravan</label>
+                    <input type="radio" name="typeDwelling" id="typeDwelling" value="Caravan"> 
+                    <label for="typeDwelling">Houseboat</label>
+                    <input type="radio" name="typeDwelling" id="typeDwelling" value="Houseboat"> 
+                </p>
+                <p>
+                    <label for="" class="rad">Status of the Dwelling:</label> 
+                    <label for="statusDwelling" >Owned outright</label>
+                    <input type="radio" name="statusDwelling" id="statusDwelling" value="Owned outright">          
+                    <label for="statusDwelling">Owned with Mortage</label>
+                    <input type="radio" name="statusDwelling" id="statusDwelling" value="Owned with Mortage"> 
+                    <label for="statusDwelling">Rented</label>
+                    <input type="radio" name="statusDwelling" id="statusDwelling" value="Rented"> 
+                    <label for="statusDwelling">Rent Free</label>
+                    <input type="radio" name="statusDwelling" id="statusDwelling" value="Rent Free"> 
+                </p>
+                <div class="checkbox">
+                    <p>Sources of energy:</p>
+                    <div>
+                        <input type="checkbox" class="chbox" name="Main Electricity" id="Main Electricity">          
+                        <label for="Main Electricity">Main Electricity</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="chbox" name="Photovoltaic" id="Photovoltaic"> 
+                        <label for="Photovoltaic">Photovoltaic</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="chbox" name="Panels" id="Panels"> 
+                        <label for="Panels">Panels</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="chbox" name="Batery" id="Batery"> 
+                        <label for="Batery">Batery</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="chbox" name="Gas" id="Gas"> 
+                        <label for="Gas">Gas</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="chbox" name="No power" id="No power"> 
+                        <label for="No power">No power</label>
+                    </div>
+                </div>
+                <p>
+                <p class="AccessIN">
+                    <label for="" class="rad">Internet Access:</label> 
+                    <label for="InternetDwelling" >Fibre to house</label>
+                    <input type="radio" name="InternetDwelling" id="InternetDwelling" value="Fibre to house">          
+                    <label for="InternetDwelling">Fibre to curb</label>
+                    <input type="radio" name="InternetDwelling" id="InternetDwelling" value="Fibre to curb"> 
+                    <label for="InternetDwelling">Fire to node</label>
+                    <input type="radio" name="InternetDwelling" id="InternetDwelling" value="Fire to node"> 
+                    <label for="InternetDwelling">Fixed wireless</label>
+                    <input type="radio" name="InternetDwelling" id="InternetDwelling" value="Fixed wireless"> 
+                    <label for="InternetDwelling">ADSL</label>
+                    <input type="radio" name="InternetDwelling" id="InternetDwelling" value="ADSL"> 
+                    <label for="InternetDwelling">Mobile Broadband</label>
+                    <input type="radio" name="InternetDwelling" id="InternetDwelling" value="Mobile Broadband"> 
+                    <label for="InternetDwelling">No internet</label>
+                    <input type="radio" name="InternetDwelling" id="InternetDwelling" value="No internet"> 
+                </p>
+                <p>
+                <label for="GBs"><span class="space">Average monthly internet download (GB)</span></label>
+                <input type="number" name="GBs" id="GBs" size="10">
+                <label for="beds" class="inline">How many bedrooms in the dwelling?</label>
+                <input type="number" name="beds" id="beds" size="10">
+                </p>
+                <p id="carContainer">
+                <!-- I had to repeat the class "verAlig" in all elements because the HTML design behaviour was doing weird things. Although the dynamical insertion of the <select> tag was not really necessary, I did not want to rely on toggle CSS classes for hiding and displaying all the HTML elements-->
+                 <label for="" class="rad verAlig">Are there any vehicles garaged at the dwelling?</label>
+                 <label for="Car" class="verAlig">Yes</label>
+                 <input type="radio" name="Car" class="verAlig" id="carRadio" value="yes">
+                 <label for="Car" class="verAlig">No</label>
+                 <input type="radio" name="Car" class="verAlig" id="carRadio" value="no">
+                </p>
+                <p id="buttonsPerson" class="buttonsPerson">
+                    <button type="button" id="helpbuttonDwelling" class="help">Help</button>
+                    <button type="button" id="nextDwelling" class="next">Next</button>
+                </p>
+        </fieldset>
+        <fieldset id="rate">
+            <legend>Rate this questionnaire</legend>
+            <div>
+                <div class="HelpFeedback">
+                    <p>
+                      Click "reset" button if you want to start the questionnaire again <br> Click "submit" to send your answers. <br> Remember feedback is optional but It will help us to improve the user experience.<br/> Follow the given format for phone number and email.  
+                    </p>
+                  </div>
+                <p class="info">Please submit your contact information if you have any following questions <span class="info2">This is non-mandatory section</span> but your feedback will help us to improve this questionnaire</p>
+                <label for="phone"><span class="space">Phone Number</span></label>
+                <input type="tel" id="phone" name="phone" placeholder="4444 333 333" pattern="[0-9]{4}\s*[0-9]{3}\s*[0-9]{3}">
+                <label for="email"><span class="inline">Email</span></label>
+                <input type="email" name="email" id="email" placeholder="example@hotmail.com">
+                <p>
+                    <label for="" class="rad">How difficult was this questionnaire to navigate?</label> 
+                    <label for="navigate" >Very hard</label>
+                    <input type="radio" name="navigate" id="navigate" value="Very hard">          
+                    <label for="navigate">Hard</label>
+                    <input type="radio" name="navigate" id="navigate" value="Hard"> 
+                    <label for="navigate">Ok</label>
+                    <input type="radio" name="navigate" id="navigate" value="Ok"> 
+                    <label for="navigate">Easy</label>
+                    <input type="radio" name="navigate" id="navigate" value="Easy"> 
+                    <label for="navigate">Very easy</label>
+                    <input type="radio" name="navigate" id="navigate" value="Very easy"> 
+                </p>
+                <p>
+                    <label for="" class="rad">Where the input requirments of each question easy to follow?</label> 
+                    <label for="follow" >Very confusing</label>
+                    <input type="radio" name="follow" id="follow" value="Very confusing">          
+                    <label for="follow">Confusing</label>
+                    <input type="radio" name="follow" id="follow" value="Confusing"> 
+                    <label for="follow">Ok</label>
+                    <input type="radio" name="follow" id="follow" value="Ok"> 
+                    <label for="follow">Clear</label>
+                    <input type="radio" name="follow" id="follow" value="Clear"> 
+                    <label for="follow">Very clear</label>
+                    <input type="radio" name="follow" id="follow" value="Very clear"> 
+                </p>
+                <p>
+                    <label for="" class="rad">Did you need to use the help?</label> 
+                    <label for="helpFeedback" >Very often</label>
+                    <input type="radio" name="helpFeedback" id="helpFeedback" value="Very often">          
+                    <label for="helpFeedback">Often</label>
+                    <input type="radio" name="helpFeedback" id="helpFeedback" value="Often"> 
+                    <label for="helpFeedback">Occasionally</label>
+                    <input type="radio" name="helpFeedback" id="helpFeedback" value="Occasionally"> 
+                    <label for="helpFeedback">Never</label>
+                    <input type="radio" name="helpFeedback" id="helpFeedback" value="Never"> 
+                </p>
+                <p>
+                    <label for="" class="rad">Did you find the help useful?</label> 
+                    <label for="helpUseful" >Yes</label>
+                    <input type="radio" name="helpUseful" id="helpUseful" value="Yes">          
+                    <label for="helpUseful">No</label>
+                    <input type="radio" name="helpUseful" id="helpUseful" value="No"> 
+                    <label for="helpUseful">Did not use it</label>
+                    <input type="radio" name="helpUseful" id="helpUseful" value="Did not use it"> 
+                </p>
+                <label for="comments" id="commentsLabel">Leave your comments here:</label>
+                <textarea name="comments" id="comments"  rows="5"></textarea>
+                <p id="buttonsPerson" class="buttonsPerson">
+                    <button type="button" id="helpbuttonFeed" class="help">Help</button>
+                    <button type="reset" class="reset">Reset</button> 
+                    <button type="submit" id="submit" class="submit">Submit</button>
+                   
+                </p>
+            </div>
+        </fieldset>
+    </form>
+</section>
+
+
+
+
+<!-- I use different templates to append elements when neccesary. I did not wanted to include this in <form></form> tag as the code would be massive and hard to read -->
+
+<template id="tempLang">
+    <select name="lang" id="lang" class="selectDesign" multiple size="10">
+        <option value="English only">English only</option>
+        <option value="Mandarin">Mandarin</option>
+        <option value="Spanish">Spanish</option>
+        <option value="French">French</option>
+        <option value="Italian">Italian</option>
+        <option value="Arabic">Arabic</option>
+        <option value="Cantonese">Cantonese</option>
+        <option value="Other">Other</option>
+    </select>
+</template>
+
+<template id="tempCar">
+    <select name="Car" id="Car" class="selectDesign" multiple size="10">
+        <option value="Automobile">Car</option>
+        <option value="Hybrid-car">Hybrid-car</option>
+        <option value="SUV">SUV</option>
+        <option value="Hybrid-SUV">Hybrid-SUV</option>
+        <option value="Truck">Truck</option>
+        <option value="Electric-Car">Electric-Car</option>
+        <option value="Scooter">Scooter</option>
+        <option value="Motorcycle">Motorcycle</option>
+    </select>
+</template>
+
+<template id="alerts">
+    <span id="empty" class="empty">*This field is empty or data incorrect</span>
+</template>
+
+<template id="buttons">
+    <p id="buttonsPerson" class="buttonsPerson">
+        <!-- <button type="button" id="helpPerson" class="help">Help</button> -->
+        <button type="button" id="nextPerson" class="next">Next</button>
+        <!-- <button type="reset" class="reset">Reset</button> -->  
+    </p>
+</template>
+
+
+<template id="people">
+    <fieldset id="person">
+        <legend id="legend">Person 1</legend>
+        <div class="HelpPerson" id="helpBox">
+            <p>
+                Provide just real information, Penalties may apply if you do not complete the Census when directed. <br> Name, Family name, Date of birth, Gender and, field of study are compulsory. 
+            </p>
+        </div>
+        <p>
+        <label for="GivenName"><span class="space">Given Name</span></label>
+        <input type="text" name="GivenName" id="GivenName" size="20">
+        <label for="FamilyName" class="inline">Family Name</label>
+        <input type="text" name="FamilyName" id="FamilyName" size="20">
+        </p>
+        <p>
+         <label for="gender">Select your gender or type your preferred term</label>
+         <input type="text" name="gender" list="gender"> 
+         <datalist id="gender">
+             <option value="Male"/>
+             <option value="Female"/>
+             <option value="Gender diverse"/>
+             <option value="Intersex"/>
+             <option value="Transgender"/>
+             <option value="Gender nonconforming"/>
+             <option value="Something else"/>
+             <option value="Decline to answer"/>
+         </datalist>  
+
+         <label for="dob" class="inline">Date of Birth</label>
+         <input type="date" name="dob" id="dob">
+        </p>
+        <p>
+         <label for="cob">Select your country of birth</label>
+         <input type="text" name="cob" list="cob"> 
+         <datalist id="cob">
+            <option value="Afganistan">
+            <option value="Albania">
+            <option value="Algeria">
+            <option value="American Samoa">
+            <option value="Andorra">
+            <option value="Angola">          
+            <option value="Anguilla">
+            <option value="Antigua & Barbuda">
+            <option value="Argentina">
+            <option value="Armenia">
+            <option value="Aruba">
+            <option value="Australia">
+            <option value="Austria">
+            <option value="Azerbaijan">
+            <option value="Bahamas">
+            <option value="Bahrain">
+            <option value="Bangladesh">
+            <option value="Barbados">
+            <option value="Belarus">
+            <option value="Belgium">
+            <option value="Belize">           
+            <option value="Benin">    
+            <option value="Bermuda">
+            <option value="Bhutan">       
+            <option value="Bolivia">
+            <option value="Brazil">
+            <option value="Bulgaria">
+            <option value="Cambodia">
+            <option value="Cameroon">
+            <option value="Canada">
+            <option value="Canary Islands">
+            <option value="Cayman Islands">
+            <option value="Central African Republic">
+            <option value="Chile">
+            <option value="China">
+            <option value="Colombia">
+            <option value="Congo">
+            <option value="Cook Islands">
+            <option value="Costa Rica">
+            <option value="Croatia">
+            <option value="Cuba">
+            <option value="Czech Republic">
+            <option value="Denmark">
+            <option value="Dominican Republic">
+            <option value="Ecuador">
+            <option value="Egypt">
+            <option value="El Salvador">
+            <option value="Estonia">
+            <option value="Ethiopia">
+            <option value="Fiji">
+            <option value="Finland">
+            <option value="France">
+            <option value="French Polynesia">
+            <option value="Germany">
+            <option value="Ghana">
+            <option value="Great Britain">
+            <option value="Greece">
+            <option value="Greenland">
+            <option value="Guatemala">
+            <option value="Guinea">
+            <option value="Haiti">
+            <option value="Hawaii">
+            <option value="Honduras">
+            <option value="Hong Kong">
+            <option value="Hungary">
+            <option value="Iceland">
+            <option value="Indonesia">
+            <option value="India">
+            <option value="Iran">
+            <option value="Iraq">
+            <option value="Ireland">
+            <option value="Israel">
+            <option value="Italy">
+            <option value="Jamaica">
+            <option value="Japan">
+            <option value="Kenya">
+            <option value="Korea North">
+            <option value="Korea Sout">
+            <option value="Laos">
+            <option value="Lebanon">
+            <option value="Liberia">
+            <option value="Libya">
+            <option value="Lithuania">
+            <option value="Luxembourg">
+            <option value="Madagascar">
+            <option value="Malaysia">
+            <option value="Maldives">
+            <option value="Martinique">
+            <option value="Mexico">
+            <option value="Monaco">
+            <option value="Mongolia">
+            <option value="Morocco">
+            <option value="Mozambique">
+            <option value="Myanmar">
+            <option value="Nepal">
+            <option value="Netherlands">
+            <option value="New Caledonia">
+            <option value="New Zealand">
+            <option value="Nicaragua">
+            <option value="Nigeria">
+            <option value="Norway">
+            <option value="Pakistan">
+            <option value="Palestine">
+            <option value="Panama">
+            <option value="Papua New Guinea">
+            <option value="Paraguay">
+            <option value="Peru">
+            <option value="Phillipines">
+            <option value="Poland">
+            <option value="Portugal">
+            <option value="Puerto Rico">
+            <option value="Qatar">
+            <option value="Republic of Serbia">
+            <option value="Russia">
+            <option value="Rwanda">
+            <option value="St Lucia">
+            <option value="St Maarten">
+            <option value="St Pierre & Miquelon">
+            <option value="Samoa">
+            <option value="Saudi Arabia">
+            <option value="Senegal">
+            <option value="Sierra Leone">
+            <option value="Singapore">
+            <option value="Slovakia">
+            <option value="Slovenia">
+            <option value="Somalia">
+            <option value="South Africa">
+            <option value="Spain">
+            <option value="Sri Lanka">
+            <option value="Sudan">
+            <option value="Suriname">
+            <option value="Swaziland">
+            <option value="Sweden">
+            <option value="Switzerland">
+            <option value="Syria">
+            <option value="Taiwan">
+            <option value="Tanzania">
+            <option value="Thailand">
+            <option value="Trinidad & Tobago">
+            <option value="Tunisia">
+            <option value="Turkey">
+            <option value="Turkmenistan">
+            <option value="Turks & Caicos Is">
+            <option value="Uganda">
+            <option value="United Kingdom">
+            <option value="Ukraine">
+            <option value="United Arab Erimates">
+            <option value="United States of America">
+            <option value="Uraguay">
+            <option value="Uzbekistan">
+            <option value="Vanuatu">
+            <option value="Vatican City State">
+            <option value="Venezuela">
+            <option value="Vietnam">
+            <option value="Virgin Islands (Brit)">
+            <option value="Virgin Islands (USA)">
+            <option value="Wallis & Futana Is">
+            <option value="Zaire">
+            <option value="Zambia">
+            <option value="Zimbabwe">
+        </p>
+        <p>
+        <label for="" class="rad">Are you an Australian citizen?</label> 
+        <label for="citiYes">Yes</label>
+        <input type="radio" name="citizen" id="citiYes" value="yes">
+        <label for="citiNo">No</label>
+        <input type="radio" name="citizen" id="citiNo" value="no">
+        <span id="yearArrive">
+        <label for="arrive" class="inline">In what year did you arrive in Australia</label>
+        <input type="number" name="arrive" id="arrive" >
+        </span>
+        </p>
+        <p>
+        <label for="" class="rad">How well do you speak English?</label> 
+        <label for="engLev" >Very well</label>
+        <input type="radio" name="engLev" id="engLev" value="Very Well">          
+        <label for="engLev">Well</label>
+        <input type="radio" name="engLev" id="engLev" value="Well"> 
+        <label for="engLev">Not well</label>
+        <input type="radio" name="engLev" id="engLev" value="Not Well"> 
+        <label for="engLev">Not at all</label>
+        <input type="radio" name="engLev" id="engLev" value="Not at All"> 
+        </p>
+        <p id="languageContainer">
+        <!-- I had to repeat the class "verAlig" in all elements because the HTML design behaviour was doing weird things. Although the dynamical insertion of the <select> tag was not really necessary, I did not want to rely on toggle CSS classes for hiding and displaying all the HTML elements-->
+         <label for="" class="rad verAlig">Do you speak other language than English?</label>
+         <label for="lang" class="verAlig">Yes</label>
+         <input type="radio" name="lang" class="verAlig" id="langRadio" value="yes">
+         <label for="lang" class="verAlig">No</label>
+         <input type="radio" name="lang" class="verAlig" id="langRadio" value="no">
+        </p>
+        <div class="multibox">
+          <label for="secondary" class="rad">What is your highest year of secondary school:</label>
+          <select name="secondary" id="secondary" class="selectDesign" multiple size="10">
+            <option value="Year 7">Year 7</option>
+            <option value="Year 8">Year 8</option>
+            <option value="Year 9">Year 9</option>
+            <option value="Year 10">Year 10</option>
+            <option value="Year 11">Year 11</option>
+            <option value="Year 12">Year 12</option>
+           </select>
+        </div><span class="space"></span>
+        <div class="multibox">
+            <label for="Degree" class="rad">What is your highest level of qualification:</label>            
+            <select name="Degree" id="Degree" class="selectDesign" multiple size="10">
+              <option value="Cert. I">Cert. I</option>
+              <option value="Cert. II">Cert. II</option>
+              <option value="Cert. III">Cert. III</option>
+              <option value="Cert. IV">Cert. IV</option>
+              <option value="Diploma">Diploma</option>
+              <option value="Bachelor Degree">Bachelor Degree</option>
+              <option value="Masters Degree">Masters Degree</option>
+              <option value="PhD">PhD</option>
+          </select>
+        </div>   
+        <p>
+            <label for="studyField">What is the main field of study of your highest qualification?</label>
+            <input type="text" name="studyField" id="studyField" size="50">
+        </p>
+        <p id="buttonsPerson" class="buttonsPerson">
+            <button type="button" id="helpPersonBtn" class="help">Help</button>
+            <button type="button" id="nextPerson" class="next">Next</button>
+            <!-- <button type="reset" class="reset">Reset</button> -->  
+        </p>
+    </fieldset>
+</template>
+    
+
+<script type="text/javascript">
+    $(initialise);
+</script>    
+</body>
+</html>

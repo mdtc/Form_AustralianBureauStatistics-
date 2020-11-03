@@ -1,0 +1,428 @@
+
+/* This is the general style of the site I had to declare some new styles for larger and smaller viewports  */
+
+body{
+ background: #fac08e;
+ color: #231f20;
+}
+
+
+.logo{
+    width: 100px;
+    margin-left: 35%;
+    
+}
+
+.brand{
+    display: inline-block;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.intro{
+    font-weight: bolder;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+/* Main style for each section  */
+
+fieldset{
+    width: 96%;
+    margin-top: 2rem;
+    background:#fcd6b5;
+    border-radius: 30px;
+    border-color: rgba(255, 255, 255, .2) ;
+    position: relative;    
+}
+
+.buttonsPerson{
+    background:#fcd6b5;
+    border-radius: 30px;
+    padding-left: 70px;   
+}
+
+
+legend {
+    font-size: x-large;
+    font-weight: bold;
+    width: 20%;
+}
+
+label {
+    font-size: large;
+    font-weight: bolder;
+}
+
+input {
+    border: none;
+    border-radius: 30px;
+}
+
+.space{
+    display: inline-block;
+    width: 12em;
+}
+
+
+.inline{
+     display: block;
+}
+
+.hide{
+    visibility: hidden;
+    position: absolute;
+}
+
+ .hidden{
+    display: none;
+} 
+
+.unhidden{
+    display: initial;
+}
+
+.buttons{
+    margin-left: 15%;
+    margin-top: 2rem;
+}
+
+button{
+    border-radius: 10px;
+    color: #231f20;
+    font-size: larger;
+    font-weight: normal;
+    margin-left: 8%;
+}
+
+.next{
+    color: #006a71;
+    border-color: #006a71; 
+    background-color: white;
+}
+
+.next:hover{
+    cursor: pointer;
+    color: white ;
+    background-color:#006a71;
+}
+
+.submit{
+    color: white ;
+    background-color:#006a71;
+
+}
+
+.submit:hover{
+    font-weight: bolder;
+    cursor: pointer;
+
+}
+
+
+.reset{
+    color:#931a25;
+    border-color: #931a25; 
+    background-color: white;
+}
+
+.reset:hover{
+    cursor: pointer;
+    background-color: #931a25;
+    color: white;
+}
+
+/* style for help section */
+
+.help{
+    color: #f0a500 ;
+    border-color: #f0a500;
+    background-color:white;
+}
+
+.help:hover{
+    cursor: pointer;
+    color: white;
+    background-color: #f0a500;
+}
+
+.HelpAddress{
+    display: none;
+    text-align: justify;
+    padding:2px;
+}
+
+.HelpAddress p{
+    font-family: sans-serif;
+    font-size: large;
+    font-weight: bold;
+    padding: 20px;
+    background-color: rgba(255, 195, 0, .3); 
+    border-radius: 30px;
+}
+
+.HelpPerson{
+    display: none;
+    text-align: center;
+    padding:2px;
+}
+
+.HelpPerson p{
+    font-family: sans-serif;
+    font-size: large;
+    font-weight: bold;
+    padding: 20px;
+    background-color: rgba(255, 195, 0, .3); 
+    border-radius: 30px;
+}
+
+.HelpDwelling{
+    display: none;
+    text-align: center;
+    padding:2px;
+}
+
+.HelpDwelling p{
+    font-family: sans-serif;
+    font-size: large;
+    font-weight: bold;
+    padding: 20px;
+    background-color: rgba(255, 195, 0, .3); 
+    border-radius: 30px;
+}
+
+.HelpFeedback{
+    display: none;
+    text-align: center;
+    padding:2px;
+}
+
+.HelpFeedback p{
+    font-family: sans-serif;
+    font-size: large;
+    font-weight: bold;
+    padding: 20px;
+    background-color: rgba(255, 195, 0, .3); 
+    border-radius: 30px;
+}
+
+.info2{
+    font-weight: bold;
+    font-size: larger;
+    color: red;
+}
+
+
+
+/* style when empty alert is trigged */
+
+.rad{
+    margin-right: 2rem;
+}
+
+#typeDwelling, #statusDwelling, #InternetDwelling, #follow, #navigate, #helpFeedback, #helpUseful{
+    margin-right: 2rem;
+}
+
+#engLev{
+    margin-right: 1rem;
+}
+
+.verAlig{
+    vertical-align: top;
+}
+
+
+.selectDesign{
+    overflow: hidden;
+    border: none;
+    border-radius: 30px;
+    padding:30px;
+    font-weight: bold;
+    font-size: large;
+    padding-bottom: 0px;
+}
+
+.selectDesign option:hover{
+    color: white;
+    background: #f0a500;
+}
+
+#yearArrive{
+    display: none;
+}
+
+
+.multibox{
+    display: inline-block;
+
+}
+
+.multibox > *{
+    display: block;
+    padding-bottom: 0px;
+}
+
+.multibox select {
+    height: 210px;
+    margin-left: 3rem;
+    margin-top: 1rem;
+   
+}
+
+.empty{
+    font-weight: bold;
+    font-size: x-large;
+    position: absolute;
+    display: inline-block;
+    color: red;
+    bottom: 30px;
+}
+
+
+.checkbox{
+    display: inline-block;
+    font-size: large;
+    font-weight: bolder;
+}
+
+.chbox{
+    margin-left: 2rem;
+}
+
+
+.info{
+    font-size: large;
+    font-weight: bolder;
+}
+
+textarea{
+    width: 92%;
+    border: none;
+    margin-top: 1.5rem;
+    display: block;
+    border-radius: 20px;
+}
+
+#dwelling{
+    display: none;
+}
+
+#rate{
+    display: none;
+}
+
+
+
+/* this query allow me to keep the same design when viewport is larger than 720  */
+@media only screen and (min-width: 720px){
+
+    .logo{
+        width: 12%;
+        margin: auto;
+        float: left;
+    }
+    
+    .brand{
+        padding-top: 1%;
+        width: 80%;
+        justify-content: center;
+        display: inline-block;
+        text-align: center;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .intro{
+        margin-top: 4rem;
+        font-size: larger;
+        margin-left: 3%;
+        margin-right: 3%;
+    
+    }
+    
+    .inline{
+        margin-left: 10%;
+        margin-right: 1rem;
+        display: inline-block;
+   }
+
+    .buttons, .buttonsPerson{
+        margin-left: 30%;
+    }
+
+
+}
+
+
+
+
+
+/* I had to write this query because in larger viewport my help section was strangely placed. */
+@media only screen and (min-width: 1200px){
+    .HelpAddress{
+        width: 350px;
+        position: absolute;
+        text-align: justify;
+        top: 30px;
+        right: 7%;
+    }
+}
+
+
+
+/* This query holds he style for smaller viewports, due to user accessibility style had to be slightly different from larger viewports */
+
+@media only screen and (max-width: 580px){
+    #streetName{
+        width: 80%;
+    }
+
+    #lang{
+        width: 80%;
+    }
+
+    .verAlig{
+        margin: initial;
+    }
+
+    .rad{
+        display: block;
+    }
+    
+    #engLev{
+        display: block;
+    }
+
+    #citizen{
+        display: block;
+    }
+
+    .selectDesign{
+        margin-left: 2.3rem;
+    }
+
+    .multibox select {
+        width: 80%;
+        margin-left: 10%;
+        text-align: center;
+    }
+
+    .empty{
+        display: block;
+        position: relative;
+        bottom: initial;
+    }
+
+    .buttonsPerson{
+        padding-left: initial;   
+    }
+
+    #typeDwelling, #statusDwelling, #InternetDwelling{
+        display: block;
+    }
+    
+}
